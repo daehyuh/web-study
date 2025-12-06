@@ -1,30 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>cafe</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/login/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/common/header.css">
 </head>
-
 <body>
-<%@include file="common/header.jsp"%>
-
-<div id="container">
-    <div id="menuAdmin">
-        <h2>cafe</h2>
-        <div id="menuAdminH2">
-            <div id="menuList">
-
-            </div>
-        </div>
+<div id="header">
+    <div style="color:white;text-align:left;cursor: pointer">
+        대현카페
     </div>
 </div>
-
-<%@include file="common/footer.jsp"%>
 </body>
+</html>
