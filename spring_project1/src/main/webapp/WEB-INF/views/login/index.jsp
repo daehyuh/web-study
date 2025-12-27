@@ -1,34 +1,31 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
-
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>   
+    
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/login/style.css">
-    <title>login</title>
+<meta charset="UTF-8">
+<title>로그인페이지</title>
+<link rel="stylesheet" type="text/css"  href="${pageContext.request.contextPath}/resources/css/login/style.css">
 </head>
-
 <body>
-<%@include file="../common/header.jsp"%>
-
+<%@ include file="/WEB-INF/views/common/header.jsp" %>
 	<div id="login-container-wrapper">
 		<div id="login-container">
 			<h2>로그인</h2>
-
+			
 			<!-- 로그인 실패시 오류 메시지 표시 -->
 			<c:if test="${not empty param.error}">
 				<p style="color:red;">아이디 또는 비밀번호가 잘못되었습니다.</p>
 			</c:if>
-
+			
 			<!-- localhost:8080/login-->
 			<form action="${pageContext.request.contextPath}/login" method="post">
-
+			
 						  <!-- CSRF 토큰 추가 -->
-
+                <input type="hidden" name="_csrf" value="${_csrf.token}">
+			
 				<div class="input-group">
 					<label for="username">아이디</label>
 					<input type="text" id="username" name="username"  required />
@@ -46,5 +43,6 @@
 		</div>
 	</div>
 
-<%@include file="../common/footer.jsp"%>
+<%@ include file="/WEB-INF/views/common/footer.jsp" %>
 </body>
+</html>

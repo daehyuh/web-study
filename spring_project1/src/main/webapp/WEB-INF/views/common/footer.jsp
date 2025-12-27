@@ -1,18 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
-<!doctype html>
-<html lang="en">
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/common/footer.css">
-    <title>Document</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css"  href="${pageContext.request.contextPath}/resources/css/common/footer.css">
 </head>
 <body>
-    <div id="footer">
-        2025. Daehyun's Cafe. All rights reserved.
-    </div>
+<div id="footer">
+	<p style="color:white;text-align:center;">2024 Canesblack Cafe. All rights reserved </p>
+</div>
 </body>
 </html>
